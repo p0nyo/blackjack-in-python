@@ -23,16 +23,34 @@ while True:
         card_player = random.choice(deck)
         card_dealer = random.choice(deck)
         deck.remove(card_player)
-        deck.remove(card_dealer)
         player += card_player
-        dealer += card_dealer
+        if dealer < 17:
+            deck.remove(card_dealer)
+            dealer += card_dealer
+        elif 19 > dealer > 17:
+            dealer_choice = random.randint(1, 2)
+            if dealer_choice == 1:
+                deck.remove(card_dealer)
+                dealer += card_dealer
+                if dealer > 21:
+                    
+            elif dealer_choice == 2:
+                new_dealer = dealer
+                
         print(f'You have {player}')
-        # print(f'Dealer has {dealer}')
+        print(f'Dealer has {dealer}')
         if player > 21:
             print('You Lost!')
-            break
+            ans1 = input('Do you want to continue? (Y/N) ').lower()
+            if ans1 == 'y':
+                None
+            elif ans1 == 'n':
+                break
+            else:
+                print('Error, please try again.')
+                None
         elif player == 21 and player == dealer:
-
+            print('tie')
     elif question == 'stay':
         if player == 21:
             print('You Won!')
@@ -44,3 +62,6 @@ while True:
             print('Tie')
         elif player < dealer:
             print('You lost!')
+    else:
+        print('Error, please try again.')
+
