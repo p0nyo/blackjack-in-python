@@ -1,6 +1,6 @@
 # blackjack-in-python
 This is my first python game
 
-`$ blackjack.py` is simple blackjack
+`$ app.py` is where the game is
 
-`$ blackjack_bet.py` is an altered version of `$ blackjack.py` but you can make bets
+`$ utils.py` is where the classes and functions are defined
