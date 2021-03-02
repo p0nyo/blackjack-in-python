@@ -6,3 +6,5 @@ Thinking of adding a betting system with money
 `app.py` is where the game is
 
 `utils.py` is where the classes and functions are defined
+
+Made with PyCharm
